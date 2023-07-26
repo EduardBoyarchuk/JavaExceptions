@@ -1,12 +1,18 @@
+package seminar2;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Exercise1{
-    public static void main(String[] args) {
-//        float x = getFloat();
-//        System.out.println("Вы ввели число: " + x);
+    public static void main(String[] args) throws Exception {
+        float x = getFloat();
+        System.out.println("Вы ввели число: " + x);
 
-        byZero();
+        Exercise2.byZero();
+
+        Exercise3.exer3();
+
+        Exercise4.emptyString();
 
     }
     public static float getFloat() {
@@ -24,16 +30,5 @@ public class Exercise1{
         }
     return flo;
     }
-    public static void byZero(){
-        int[] intArray = new int[10];
-        try {
-            /*int d = 0;*/ //Нельзя делить на ноль
-            int d = 1;
-            double catchedRes1 = intArray[8] / d;
-            System.out.println("catchedRes1 = " + catchedRes1);
-        } catch (ArithmeticException e) {
-            System.out.println("Catching exception: " + e);
-        }
 
-    }
 }
